@@ -6,11 +6,11 @@ from sklearn.linear_model import LinearRegression
 
 data = pd.read_excel("mortality.xlsx",sheet_name='1')
 # Select the relevant columns for the analysis (incidence rate)
-X_male = data['M'].values.reshape(-1, 1)
-y_male = data['Y'].values.reshape(-1, 1)
+X_male = data['Y'].values.reshape(-1, 1)
+y_male = data['M'].values.reshape(-1, 1)
 data2 = pd.read_excel("mortality.xlsx",sheet_name='2')
-X_female = data2['F'].values.reshape(-1, 1)
-y_female = data2['Y'].values.reshape(-1, 1)
+X_female = data2['Y'].values.reshape(-1, 1)
+y_female = data2['F'].values.reshape(-1, 1)
 
 
 # Create separate instances of the LinearRegression model for each gender
